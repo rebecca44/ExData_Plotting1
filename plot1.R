@@ -9,7 +9,7 @@ ex_data$Date <- as.Date(ex_data$Date , "%d/%m/%Y")
 ex_data <- subset(ex_data, Date == '2007-02-01' | Date == '2007-02-02')
 
 # Open new PNG file
-png(file = "plot1.png", width = 480, height = 480)
+png(file = "plot1.png", width = 480, height = 480, type = "cairo", bg = "transparent")
 
 # Generate Histogram Graph
 hist(ex_data$Global_active_power, main = "Global Active Power", xlab="Global Active Power (kilowatts)",col="Red")

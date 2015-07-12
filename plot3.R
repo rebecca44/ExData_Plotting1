@@ -12,7 +12,7 @@ ex_data$DateTime <- strptime(ex_data$DateTime , "%d/%m/%Y %H:%M:%S")
 ex_data <- subset(ex_data, DateTime >= '2007-02-01 00:00:00' & DateTime <= '2007-02-02 23:59:59')
 
 # Open new PNG file
-png(file = "plot3.png", width = 480, height = 480)
+png(file = "plot3.png", width = 480, height = 480, type = "cairo", bg = "transparent")
 
 # Generate Graph
 plot(ex_data$DateTime, ex_data$Sub_metering_1, type="l", ylab = "Energy sub metering", xlab="")
